@@ -2,16 +2,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<properties>
-						<bundle.symbolicName>org.cytoscape.clustnsee</bundle.symbolicName>
+						<bundle.symbolicName>org.cytoscape.clustnsee.clustnsee</bundle.symbolicName>
 		<bundle.namespace>org.cytoscape.clustnsee</bundle.namespace>
 	</properties>
 
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.cytoscape</groupId>
+	<groupId>org.cytoscape.clustnsee</groupId>
 	<artifactId>clustnsee</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<name>clustnsee</name>
+			<name>${bundle.symbolicName} [${bundle.namespace}]</name>
+	
 	<packaging>bundle</packaging>
 
 	<build>
@@ -20,7 +21,7 @@
 				<directory>src/main/resources</directory>
 			</resource>
 		</resources>
-		<!-- Cytoscape requires Java 1.8 -->
+		<!-- Cytoscape requires Java 1.6 -->
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -43,8 +44,8 @@
 					</execution>
 				</executions>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
+					<source>1.6</source>
+					<target>1.6</target>
 					<optimize>true</optimize>
 					<showWarnings>true</showWarnings>
 					<showDeprecation>true</showDeprecation>
@@ -116,17 +117,17 @@
 		<dependency>
 			<groupId>org.cytoscape</groupId>
 			<artifactId>service-api</artifactId>
-			<version>3.5.0-RC2</version>
+			<version>3.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.cytoscape</groupId>
 			<artifactId>swing-application-api</artifactId>
-			<version>3.5.0-RC2</version>
+			<version>3.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.cytoscape</groupId>
 			<artifactId>session-api</artifactId>
-			<version>3.5.0-RC2</version>
+			<version>3.0.0</version>
 		</dependency>
 
 		<!-- Logging -->
